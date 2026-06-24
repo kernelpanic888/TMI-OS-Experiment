@@ -20,8 +20,10 @@ guard-правила до переноса в основной слой.
 
 ## Что внутри
 
+- `catalog/` - каталог доменных пространств песочницы.
 - `examples/hello.i1` - минимальная программа на И1.
 - `sandbox/index.html` - локальная визуальная песочница без зависимостей.
+- `spaces/bare_stack_clean_build/` - чистая локальная сборка Lean / Vampire / E.
 - `docs/BOUNDARY.md` - граница: что можно держать здесь, а что нельзя.
 - `docs/BARE_STACK_BUILD.md` - сборка голого стека Lean / Z3 / Vampire / E.
 - `scripts/check_sandbox.sh` - быстрый локальный guard-check.
@@ -38,6 +40,12 @@ guard-правила до переноса в основной слой.
 
 ```text
 docs/BARE_STACK_BUILD.md
+```
+
+Запустить доменную clean build:
+
+```bash
+./spaces/bare_stack_clean_build/scripts/clean_build.sh
 ```
 
 Открыть web-плоскость:

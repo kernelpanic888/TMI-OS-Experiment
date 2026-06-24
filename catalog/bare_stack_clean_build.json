@@ -1,0 +1,22 @@
+{
+  "id": "bare_stack_clean_build",
+  "status": "local_sandbox_space",
+  "publication": false,
+  "remote": null,
+  "chain": "LLM/GPT/Codex -> Lean -> TLFL -> I1",
+  "required_tools": [
+    "lean",
+    "lake",
+    "vampire",
+    "eprover"
+  ],
+  "optional_tools": [
+    "z3"
+  ],
+  "entrypoint": "spaces/bare_stack_clean_build/scripts/clean_build.sh",
+  "guard": [
+    "no_private_data",
+    "no_overclaim",
+    "no_auto_publish"
+  ]
+}
