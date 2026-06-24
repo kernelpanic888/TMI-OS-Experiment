@@ -26,6 +26,11 @@ require_tool "lake" "$LAKE_BIN"
 require_tool "vampire" "$VAMPIRE_BIN"
 require_tool "eprover" "$EPROVER_BIN"
 
+if [[ ! -f "$repo_root/PASSPORT.md" ]]; then
+  echo "missing domain passport: $repo_root/PASSPORT.md" >&2
+  exit 1
+fi
+
 echo
 echo "[versions]"
 "$LEAN_BIN" --version
@@ -54,6 +59,7 @@ grep -Eq '# Proof found!|SZS status Theorem' "$space_root/reports/eprover_smoke.
 cat > "$space_root/reports/local_clean_build_status.txt" <<REPORT
 status: PASS
 space: bare_stack_clean_build
+passport: PASSPORT.md
 lean: $("$LEAN_BIN" --version | head -n 1)
 lake: $("$LAKE_BIN" --version | head -n 1)
 vampire: $("$VAMPIRE_BIN" --version | head -n 1)

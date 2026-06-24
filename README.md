@@ -12,6 +12,12 @@ LLM/GPT/Codex -> Lean -> TLFL -> И1
 Intent -> CanonicalRecord -> Passport -> GuardedAction
 ```
 
+Главный вход:
+
+```text
+PASSPORT.md
+```
+
 ## Что это
 
 Это не основное ядро TLFL и не публикационный архив. Это отдельная
@@ -21,6 +27,7 @@ Intent -> CanonicalRecord -> Passport -> GuardedAction
 ## Что внутри
 
 - `catalog/` - каталог доменных пространств эксперимента.
+- `PASSPORT.md` - главный паспорт, из которого компилируется домен.
 - `examples/hello.i1` - минимальная программа на И1.
 - `experiment/index.html` - локальная визуальная плоскость без зависимостей.
 - `spaces/bare_stack_clean_build/` - чистая локальная сборка Lean / Vampire / E.

@@ -6,7 +6,7 @@ cd "$root"
 
 echo "TMI-OS experiment check"
 
-for path in README.md docs/BOUNDARY.md examples/hello.i1 experiment/index.html; do
+for path in PASSPORT.md README.md docs/BOUNDARY.md examples/hello.i1 experiment/index.html; do
   test -f "$path"
 done
 

@@ -3,6 +3,12 @@
 Назначение: проверить голый локальный стек без основного TLFL repo и без
 публикации.
 
+Source passport:
+
+```text
+../../PASSPORT.md
+```
+
 ```text
 Lean smoke theorem
 Vampire TPTP smoke theorem
