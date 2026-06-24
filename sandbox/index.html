@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>TMI-OS Sandbox</title>
+  <style>
+    :root {
+      --ink: #172018;
+      --muted: #607060;
+      --line: #cad7c7;
+      --accent: #1e8a4a;
+      --bg: #f7f4ea;
+      --card: rgba(255, 255, 248, 0.88);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      color: var(--ink);
+      font-family: Georgia, "Times New Roman", serif;
+      background:
+        linear-gradient(rgba(30, 138, 74, 0.06) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(30, 138, 74, 0.06) 1px, transparent 1px),
+        radial-gradient(circle at 20% 20%, rgba(30, 138, 74, 0.12), transparent 28rem),
+        var(--bg);
+      background-size: 28px 28px, 28px 28px, auto, auto;
+    }
+
+    main {
+      width: min(1040px, calc(100vw - 32px));
+      margin: 0 auto;
+      padding: 56px 0;
+    }
+
+    .surface {
+      border: 1px solid var(--line);
+      background: var(--card);
+      box-shadow: 0 20px 80px rgba(23, 32, 24, 0.12);
+      padding: clamp(24px, 5vw, 56px);
+    }
+
+    h1 {
+      margin: 0 0 12px;
+      font-size: clamp(42px, 8vw, 92px);
+      line-height: 0.9;
+      letter-spacing: -0.06em;
+    }
+
+    .subtitle {
+      margin: 0 0 36px;
+      color: var(--muted);
+      font-size: clamp(18px, 2.6vw, 30px);
+    }
+
+    .formula {
+      display: grid;
+      gap: 16px;
+      margin: 32px 0;
+      padding: 24px;
+      border-left: 6px solid var(--accent);
+      background: rgba(30, 138, 74, 0.06);
+      font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+      font-size: clamp(15px, 1.8vw, 22px);
+      line-height: 1.55;
+      white-space: pre-wrap;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 16px;
+      margin-top: 32px;
+    }
+
+    .card {
+      border: 1px solid var(--line);
+      padding: 20px;
+      background: rgba(255, 255, 255, 0.58);
+    }
+
+    .card strong {
+      display: block;
+      margin-bottom: 8px;
+      color: var(--accent);
+      font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <section class="surface">
+      <h1>TMI-OS Sandbox</h1>
+      <p class="subtitle">Голая независимая плоскость для маленьких проверяемых срезов.</p>
+
+      <div class="formula">LLM/GPT/Codex -> Lean -> TLFL -> И1
+
+Intent -> CanonicalRecord -> Passport -> GuardedAction</div>
+
+      <div class="grid">
+        <article class="card">
+          <strong>input</strong>
+          Идея входит как intent, без публикационного claim.
+        </article>
+        <article class="card">
+          <strong>passport</strong>
+          Каждый срез получает boundary: что он утверждает и чего не утверждает.
+        </article>
+        <article class="card">
+          <strong>guard</strong>
+          Песочница отсекает секреты, overclaim и авто-публикацию.
+        </article>
+        <article class="card">
+          <strong>promote</strong>
+          Только после проверки артефакт можно переносить в основной слой.
+        </article>
+      </div>
+    </section>
+  </main>
+</body>
+</html>
+
