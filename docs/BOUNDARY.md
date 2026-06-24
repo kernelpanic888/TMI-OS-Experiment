@@ -1,9 +1,9 @@
-# Sandbox Boundary
+# Experiment Boundary
 
 Status:
 
 ```text
-local sandbox
+local experiment
 not a publication layer
 not a proof claim
 not a private-secrets store
@@ -29,9 +29,8 @@ Not allowed:
 Promotion rule:
 
 ```text
-sandbox artifact
+experiment artifact
 -> guard-check
 -> review
 -> only then promote to TLFL / docs / publication package
 ```
-

@@ -9,7 +9,7 @@ LAKE_BIN="${LAKE:-/Users/test/.elan/bin/lake}"
 VAMPIRE_BIN="${VAMPIRE:-/opt/homebrew/bin/vampire}"
 EPROVER_BIN="${EPROVER:-/opt/homebrew/bin/eprover}"
 
-echo "TMI-OS bare stack clean build"
+echo "TMI-OS experiment bare stack clean build"
 echo "space: $space_root"
 
 require_tool() {
@@ -34,8 +34,8 @@ echo "[versions]"
 "$EPROVER_BIN" --version | head -n 1
 
 echo
-echo "[sandbox guard]"
-"$repo_root/scripts/check_sandbox.sh"
+echo "[experiment guard]"
+"$repo_root/scripts/check_experiment.sh"
 
 echo
 echo "[lean smoke]"
@@ -43,12 +43,12 @@ echo "[lean smoke]"
 
 echo
 echo "[vampire smoke]"
-"$VAMPIRE_BIN" "$space_root/tptp/sandbox_smoke.p" | tee "$space_root/reports/vampire_smoke.txt"
+"$VAMPIRE_BIN" "$space_root/tptp/experiment_smoke.p" | tee "$space_root/reports/vampire_smoke.txt"
 grep -Eq 'Termination reason: Refutation|SZS status Theorem' "$space_root/reports/vampire_smoke.txt"
 
 echo
 echo "[e prover smoke]"
-"$EPROVER_BIN" --auto --tstp-in "$space_root/tptp/sandbox_smoke.p" | tee "$space_root/reports/eprover_smoke.txt"
+"$EPROVER_BIN" --auto --tstp-in "$space_root/tptp/experiment_smoke.p" | tee "$space_root/reports/eprover_smoke.txt"
 grep -Eq '# Proof found!|SZS status Theorem' "$space_root/reports/eprover_smoke.txt"
 
 cat > "$space_root/reports/local_clean_build_status.txt" <<REPORT

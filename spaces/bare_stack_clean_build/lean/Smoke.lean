@@ -1,12 +1,12 @@
-namespace TMIOS.Sandbox.BareStack
+namespace TMIOS.Experiment.BareStack
 
-def SandboxReady : Prop := True
+def ExperimentReady : Prop := True
 
-theorem sandbox_ready : SandboxReady := by
+theorem experiment_ready : ExperimentReady := by
   trivial
 
-theorem guarded_action_from_ready : SandboxReady -> SandboxReady := by
+theorem guarded_action_from_ready : ExperimentReady -> ExperimentReady := by
   intro h
   exact h
 
-end TMIOS.Sandbox.BareStack
+end TMIOS.Experiment.BareStack

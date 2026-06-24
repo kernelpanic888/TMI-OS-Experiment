@@ -1,7 +1,7 @@
 # Bare Stack Build: Lean / Vampire / E
 
 Цель: развернуть минимальный стек проверки на чистой машине и понять, какие
-компоненты должны быть доступны до переноса артефакта из песочницы в TLFL или
+компоненты должны быть доступны до переноса артефакта из эксперимента в TLFL или
 proof-lab.
 
 Этот документ не публикует claims. Он только описывает техническую сборку.
@@ -17,7 +17,7 @@ Vampire
 E prover
 ```
 
-В канонической цепочке песочницы:
+В канонической цепочке эксперимента:
 
 ```text
 LLM/GPT/Codex -> Lean -> TLFL -> И1
@@ -101,22 +101,22 @@ sudo mv vampire /usr/local/bin/vampire
 vampire --version
 ```
 
-## 4. Проверка песочницы
+## 4. Проверка эксперимента
 
-Из корня песочницы:
+Из корня эксперимента:
 
 ```bash
-./scripts/check_sandbox.sh
+./scripts/check_experiment.sh
 ```
 
 Ожидаемый результат:
 
 ```text
-TMI-OS sandbox check
-sandbox check: PASS
+TMI-OS experiment check
+experiment check: PASS
 ```
 
-## 5. Проверка TLFL рядом с песочницей
+## 5. Проверка TLFL рядом с экспериментом
 
 Если рядом лежит TLFL repo:
 
@@ -137,7 +137,7 @@ Regression checks.
 SelfThinkingUniverse checks.
 ```
 
-## 6. Проверка proof-lab рядом с песочницей
+## 6. Проверка proof-lab рядом с экспериментом
 
 Если рядом лежит `tmi_proof_lab_v0_2`:
 
@@ -180,4 +180,3 @@ command runs
 guard passes
 artifact can be promoted only after review
 ```
-

@@ -1,6 +1,6 @@
 {
   "id": "bare_stack_clean_build",
-  "status": "local_sandbox_space",
+  "status": "local_experiment_space",
   "publication": false,
   "remote": null,
   "chain": "LLM/GPT/Codex -> Lean -> TLFL -> I1",

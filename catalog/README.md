@@ -1,6 +1,6 @@
-# Sandbox Catalog
+# Experiment Catalog
 
-Каталог доменных пространств песочницы.
+Каталог доменных пространств эксперимента.
 
 | Space | Purpose | Build |
 |---|---|---|

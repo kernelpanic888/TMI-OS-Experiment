@@ -7,12 +7,12 @@
 Lean smoke theorem
 Vampire TPTP smoke theorem
 E prover TPTP smoke theorem
-Sandbox guard-check
+Experiment guard-check
 ```
 
 ## Запуск
 
-Из корня песочницы:
+Из корня эксперимента:
 
 ```bash
 ./spaces/bare_stack_clean_build/scripts/clean_build.sh
@@ -22,9 +22,9 @@ Sandbox guard-check
 
 ```text
 Lean checks Smoke.lean
-Vampire proves sandbox_smoke.p
-E prover proves sandbox_smoke.p
-Sandbox guard passes
+Vampire proves experiment_smoke.p
+E prover proves experiment_smoke.p
+Experiment guard passes
 ```
 
 ## Boundary

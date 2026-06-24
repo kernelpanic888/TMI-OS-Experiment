@@ -6,7 +6,7 @@
 # Initializing proof state
 # Scanning for AC axioms
 #
-#sandbox_ready <- .
+#experiment_ready <- .
 ## Presaturation interreduction done
 
 # Proof found!

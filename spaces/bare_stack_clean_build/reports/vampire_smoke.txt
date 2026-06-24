@@ -1,15 +1,15 @@
 % Running in auto input_syntax mode. Trying TPTP
 % Refutation found. Thanks to Tanya!
-% SZS status Theorem for sandbox_smoke
-% SZS output start Proof for sandbox_smoke
-1. sandbox_ready [input(axiom)]
-2. sandbox_ready [input(conjecture)]
-3. ~sandbox_ready [negated conjecture 2]
-4. ~sandbox_ready [flattening 3]
-5. sandbox_ready [cnf transformation 1]
-6. ~sandbox_ready [cnf transformation 4]
+% SZS status Theorem for experiment_smoke
+% SZS output start Proof for experiment_smoke
+1. experiment_ready [input(axiom)]
+2. experiment_ready [input(conjecture)]
+3. ~experiment_ready [negated conjecture 2]
+4. ~experiment_ready [flattening 3]
+5. experiment_ready [cnf transformation 1]
+6. ~experiment_ready [cnf transformation 4]
 7. $false [forward subsumption resolution 5,6]
-% SZS output end Proof for sandbox_smoke
+% SZS output end Proof for experiment_smoke
 % ------------------------------
 % Version: Vampire 5.0.1 (Release build, commit )
 % CaDiCaL version: 2.1.3
