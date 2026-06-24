@@ -28,6 +28,9 @@ PASSPORT.md
 
 - `catalog/` - каталог доменных пространств эксперимента.
 - `PASSPORT.md` - главный паспорт, из которого компилируется домен.
+- `codex/PASSPORT.md` - рабочий паспорт инструментальной роли Codex в эксперименте.
+- `control/DICTIONARY.md` - контрольный словарь паспорта, без заглубления языка.
+- `docs/DEPLOY_FROM_PASSPORT.md` - инструкция развертывания от паспорта через Lean / Vampire / E.
 - `examples/hello.i1` - минимальная программа на И1.
 - `experiment/index.html` - локальная визуальная плоскость без зависимостей.
 - `spaces/bare_stack_clean_build/` - чистая локальная сборка Lean / Vampire / E.

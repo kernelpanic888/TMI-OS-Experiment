@@ -6,8 +6,17 @@ cd "$root"
 
 echo "TMI-OS experiment check"
 
-for path in PASSPORT.md README.md docs/BOUNDARY.md examples/hello.i1 experiment/index.html; do
+for path in PASSPORT.md codex/PASSPORT.md control/DICTIONARY.md README.md docs/BOUNDARY.md examples/hello.i1 experiment/index.html; do
   test -f "$path"
+done
+
+for token in ForeignPassportAcceptanceLaw PassportRightsGuard FakePassportDefense; do
+  grep -q "$token" PASSPORT.md
+  grep -q "$token" codex/PASSPORT.md
+done
+
+for term in CONTROL_DICTIONARY ForeignPassport Provenance Integrity Quarantine BuildAxis; do
+  grep -q "$term" control/DICTIONARY.md
 done
 
 if grep -RInE 'github_pat_|ghp_|sk-[A-Za-z0-9_-]{20,}|BEGIN (RSA |OPENSSH |EC |DSA )?PRIVATE KEY|password *=|token *=|api[_-]?key *=' . \
