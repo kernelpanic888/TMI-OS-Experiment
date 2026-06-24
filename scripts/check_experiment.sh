@@ -6,9 +6,13 @@ cd "$root"
 
 echo "TMI-OS experiment check"
 
-for path in PASSPORT.md codex/PASSPORT.md control/DICTIONARY.md README.md docs/BOUNDARY.md docs/DEPLOY_FROM_PASSPORT.md examples/hello.i1 experiment/index.html spaces/installer_sandbox/README.md spaces/installer_sandbox/scripts/install_sandbox.sh spaces/installer_sandbox/scripts/check_installer_sandbox.sh; do
+for path in PASSPORT.md SYNC_STATUS.md codex/PASSPORT.md control/DICTIONARY.md README.md docs/BOUNDARY.md docs/DEPLOY_FROM_PASSPORT.md examples/hello.i1 experiment/index.html spaces/installer_sandbox/README.md spaces/installer_sandbox/scripts/install_sandbox.sh spaces/installer_sandbox/scripts/check_installer_sandbox.sh; do
   test -f "$path"
 done
+
+grep -q "SYNCED" SYNC_STATUS.md
+grep -q "PASSPORT_AXIS_INSTALLED" SYNC_STATUS.md
+grep -q "LEAN_VAMPIRE_E_SMOKE_GREEN" SYNC_STATUS.md
 
 for token in ForeignPassportAcceptanceLaw PassportRightsGuard FakePassportDefense; do
   grep -q "$token" PASSPORT.md
