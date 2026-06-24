@@ -54,6 +54,12 @@ Review :=
 
 BuildAxis :=
   Lean 4 / Vampire / E check path used by this experiment.
+
+AxisInstall :=
+  installing the build axis from the domain passport.
+
+InstallerSandbox :=
+  small dry-run domain used to test installer behavior without global install.
 ```
 
 ## Control Actions
@@ -67,6 +73,27 @@ verify_boundary(Passport)
 quarantine_if_unverified(Passport)
 do_not_mutate(ForeignPassport)
 do_not_claim_ownership(ForeignPassport)
+```
+
+## Control Chains
+
+```text
+BuildAxis(Passport) :=
+  GuardCheck
+  -> Lean4
+  -> Vampire
+  -> EProver
+  -> Report
+```
+
+```text
+AxisInstallFromPassport(Passport) :=
+  Passport
+  -> ControlDictionary
+  -> InstallerSandbox
+  -> GuardCheck
+  -> BuildAxis
+  -> ControlledPush
 ```
 
 ## Non-Goals

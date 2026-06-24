@@ -1,0 +1,8 @@
+status: PASS
+source: TMI-OS-Experiment
+target: <temporary-sandbox-root>
+axis: AxisInstallFromPassport
+passport: PASSPORT.md
+role_passport: codex/PASSPORT.md
+dictionary: control/DICTIONARY.md
+program: examples/hello.i1

@@ -105,6 +105,31 @@ Reading:
 цепочка сборки идет только от проверенного паспорта.
 ```
 
+Axis installation:
+
+```text
+AxisInstallFromPassport :=
+  read(PASSPORT.md)
+  -> accept_foreign_passports_as_immutable_inputs
+  -> protect_passport_rights
+  -> reject_fake_passports
+  -> load_control_dictionary(control/DICTIONARY.md)
+  -> derive_role_passports(codex/PASSPORT.md)
+  -> run_guard(scripts/check_experiment.sh)
+  -> run_axis(Lean4, Vampire, E)
+  -> write_report
+  -> controlled_push(private)
+```
+
+Reading:
+
+```text
+ось устанавливается не из желания системы, а из паспорта;
+паспорт задает границу;
+guard проверяет вход;
+build-axis подтверждает, что срез можно развернуть.
+```
+
 ## Role Passports
 
 ```text
@@ -155,6 +180,7 @@ unreviewed claims
 
 ```text
 spaces/bare_stack_clean_build
+spaces/installer_sandbox
 ```
 
 Build command:

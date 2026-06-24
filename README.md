@@ -33,6 +33,7 @@ PASSPORT.md
 - `docs/DEPLOY_FROM_PASSPORT.md` - инструкция развертывания от паспорта через Lean / Vampire / E.
 - `examples/hello.i1` - минимальная программа на И1.
 - `experiment/index.html` - локальная визуальная плоскость без зависимостей.
+- `spaces/installer_sandbox/` - маленькая песочница для проверки инсталлятора.
 - `spaces/bare_stack_clean_build/` - чистая локальная сборка Lean / Vampire / E.
 - `docs/BOUNDARY.md` - граница: что можно держать здесь, а что нельзя.
 - `docs/BARE_STACK_BUILD.md` - сборка голого стека Lean / Z3 / Vampire / E.
@@ -44,6 +45,12 @@ PASSPORT.md
 
 ```bash
 ./scripts/check_experiment.sh
+```
+
+Проверить маленькую песочницу инсталлятора:
+
+```bash
+./spaces/installer_sandbox/scripts/check_installer_sandbox.sh
 ```
 
 Развернуть полный проверочный стек:

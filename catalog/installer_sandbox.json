@@ -1,0 +1,9 @@
+{
+  "id": "installer_sandbox",
+  "title": "Installer Sandbox",
+  "status": "public-experiment",
+  "entry": "spaces/installer_sandbox/README.md",
+  "run": "./spaces/installer_sandbox/scripts/check_installer_sandbox.sh",
+  "source_passport": "PASSPORT.md",
+  "formula": "AxisInstallFromPassport"
+}

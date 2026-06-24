@@ -22,12 +22,38 @@ system-control claim about reproducible deployment.
 PASSPORT.md
 -> codex/PASSPORT.md
 -> control/DICTIONARY.md
+-> spaces/installer_sandbox/scripts/install_sandbox.sh
 -> scripts/check_experiment.sh
 -> spaces/bare_stack_clean_build/scripts/clean_build.sh
 -> Lean 4
 -> Vampire
 -> E prover
 -> reports/local_clean_build_status.txt
+```
+
+## Axis Installation
+
+```text
+AxisInstallFromPassport :=
+  read(PASSPORT.md)
+  -> accept_foreign_passports_as_immutable_inputs
+  -> protect_passport_rights
+  -> reject_fake_passports
+  -> load_control_dictionary(control/DICTIONARY.md)
+  -> derive_role_passports(codex/PASSPORT.md)
+  -> run_guard(scripts/check_experiment.sh)
+  -> run_axis(Lean4, Vampire, E)
+  -> write_report
+  -> controlled_push(private)
+```
+
+Operational reading:
+
+```text
+first install the axis from the passport;
+then test a tiny installer sandbox;
+then run the full local build axis;
+only then push the private experiment state.
 ```
 
 ## First Installation Law
@@ -109,12 +135,15 @@ Quarantine uncertain passports for review.
    examples/hello.i1
    experiment/index.html
 
-5. The full local axis was run:
+5. A small installer sandbox can be unfolded:
+   spaces/installer_sandbox/scripts/check_installer_sandbox.sh
+
+6. The full local axis was run:
    Lean 4 / Lake
    Vampire
    E prover
 
-6. The result was recorded:
+7. The result was recorded:
    spaces/bare_stack_clean_build/reports/local_clean_build_status.txt
 ```
 
@@ -124,6 +153,7 @@ From repository root:
 
 ```bash
 ./scripts/check_experiment.sh
+./spaces/installer_sandbox/scripts/check_installer_sandbox.sh
 ./spaces/bare_stack_clean_build/scripts/clean_build.sh
 ```
 
@@ -131,6 +161,7 @@ Expected:
 
 ```text
 TMI-OS experiment check: PASS
+installer sandbox check: PASS
 Lean smoke: PASS
 Vampire smoke: PASS
 E prover smoke: PASS
@@ -166,6 +197,7 @@ DeployFromPassport :=
   read(PASSPORT.md)
   -> derive(codex/PASSPORT.md)
   -> load_control_dictionary(control/DICTIONARY.md)
+  -> install_axis_sandbox
   -> guard
   -> build(Lean4, Vampire, E)
   -> report
